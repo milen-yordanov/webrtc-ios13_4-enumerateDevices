@@ -14,7 +14,7 @@
     devices = await navigator.mediaDevices.enumerateDevices();
     devices.forEach(d => log.push(d.kind));
 
-    document.getElementById('result-log').innerText = log.join(', ');
+    document.getElementById('result-log').innerText = log.join('<br>');
   }
 
   test();
