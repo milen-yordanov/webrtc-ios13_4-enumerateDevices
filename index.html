@@ -6,13 +6,13 @@
   async function test() {
     let log = [];
 
-    log.append("enumerateDevices first call");
+    log.push("enumerateDevices first call");
     let devices = await navigator.mediaDevices.enumerateDevices();
-    devices.forEach(d => log.append(d.kind));
+    devices.forEach(d => log.push(d.kind));
 
-    log.append("enumerateDevices second call");
+    log.push("enumerateDevices second call");
     devices = await navigator.mediaDevices.enumerateDevices();
-    devices.forEach(d => log.append(d.kind));
+    devices.forEach(d => log.push(d.kind));
 
     document.getElementById('result-log').innerText = 'TEST';
   }
